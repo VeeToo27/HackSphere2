@@ -182,9 +182,6 @@ with st.spinner("Loading AI models..."):
     tokenizer, spam_model, model_source = load_nlp_model()
     phishing_model = load_url_model()
 
-if "huggingface" in model_source.lower() or "/" in model_source:
-    st.caption(f"ℹ️ NLP model loaded from HuggingFace Hub: `{model_source}`")
-
 # ======================================
 # Legitimate Domains
 # ======================================
