@@ -368,12 +368,7 @@ if uploaded_file:
 
     st.subheader("🔎 OCR Text Extraction")
 
-try:
-            extracted_text = pytesseract.image_to_string(image)
-        except pytesseract.TesseractNotFoundError:
-            st.warning("⚠️ Tesseract OCR is not installed. Using placeholder text extraction.")
-            extracted_text = "[Tesseract OCR not available - please install tesseract-ocr system package]"
-            
+    extracted_text = pytesseract.image_to_string(image)
 
     st.text_area("Extracted Text", extracted_text, height=200)
 
